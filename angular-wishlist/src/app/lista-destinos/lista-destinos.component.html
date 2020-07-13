@@ -1,0 +1,4 @@
+<!-- Se llama al componente DestinoViaje para llamar los valores de forma iterativa
+    (desde el arreglo que esta en el ts de ListaDestinos), se usa la directiva *ngFor-->
+<!-- la directiva *ngFor itera en el arreglo pero para mostrar los datos se llama la variable y se reemplaza con la variable dentro de la directiva, en este caso 'x'-->
+<app-destino-viaje *ngFor="let x of destinos" [nombre]="x"></app-destino-viaje>
