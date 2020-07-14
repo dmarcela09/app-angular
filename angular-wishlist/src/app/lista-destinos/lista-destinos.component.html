@@ -1,4 +1,34 @@
 <!-- Se llama al componente DestinoViaje para llamar los valores de forma iterativa
     (desde el arreglo que esta en el ts de ListaDestinos), se usa la directiva *ngFor-->
 <!-- la directiva *ngFor itera en el arreglo pero para mostrar los datos se llama la variable y se reemplaza con la variable dentro de la directiva, en este caso 'x'-->
-<app-destino-viaje *ngFor="let x of destinos" [nombre]="x"></app-destino-viaje>
+
+<div class="container content">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <span class="anchor" id="formLogin"></span>
+            <!--form card login with validation feedback -->
+            <div class="card card-outline-secondary">
+                <div class="card-header">
+                    <h3 class="mb-0">Whishlist</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingresar nombre..." #nombre>
+                        </div>
+                        <div class="form-group">
+                            <label for="Imagen Url">Imagen Url</label>
+                            <input type="text" class="form-control" id="imagenUrl" placeholder="Ingresar url..." #url>
+                        </div>
+                        <button type="submit" class="btn btn-primary" (click)="guardar(nombre.value, url.value)">Guardar!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5">
+    <div class="row row-flex">
+        <app-destino-viaje *ngFor="let d of destinos" [destinos]="d"></app-destino-viaje>
+    </div>
+</div>
