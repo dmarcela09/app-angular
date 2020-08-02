@@ -26,7 +26,13 @@
         </div>
     </div>
     <hr class="mb-5">
+    <!-- PASO CUATRO: utilizamos el boton creado y el evento clicked, dentro del boton se puede colocar el valor 'd' o '$event', son equivalentes por el tipo de objeto en destino-viaje.c.ts
+    La funcion elegido es llamada y pasa a lista-destinos.c.ts...-->
     <div class="row row-flex">
-        <app-destino-viaje *ngFor="let d of destinos" [destinos]="d"></app-destino-viaje>
+        <app-destino-viaje 
+            *ngFor="let d of destinos" 
+            [destinos]="d"
+            (clicked)="elegido(d)"
+            ></app-destino-viaje>
     </div>
 </div>
