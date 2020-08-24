@@ -1,1 +1,1 @@
-Pruebas para manejar Angular
+Curso de Angular - Coursera
